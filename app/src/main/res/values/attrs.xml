@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--1-->
+    <declare-styleable name="ArcsView">
+        <!--2-->
+        <attr name="arcColor1" format="color" />
+        <attr name="arcColor2" format="color" />
+        <attr name="disabledArcColor" format="color" />
+        <attr name="strokeWidth1" format="dimension" />
+        <attr name="strokeWidth2" format="dimension" />
+        <attr name="arcDir" format="enum">
+            <enum name="clockwise" value="1"/>
+            <enum name="counterClockwise" value="-1"/>
+        </attr>
+        <attr name="speed" format="integer"/>
+        <attr name="startAngle1" format="integer"/>
+        <attr name="startAngle2" format="integer"/>
+        <attr name="sweepAngle1" format="integer"/>
+        <attr name="sweepAngle2" format="integer"/>
+    </declare-styleable>
+
+    <!--1-->
+    <declare-styleable name="CircularBarsView">
+        <!--2-->
+        <attr name="barsColor" format="color" />
+        <attr name="animationBarColor" format="color" />
+        <attr name="disabledBarsColor" format="color" />
+        <attr name="barsCount" format="integer" />
+        <attr name="barsLength" format="dimension" />
+        <attr name="circularBarsDir" format="enum">
+            <enum name="clockwise" value="-1"/>
+            <enum name="counterClockwise" value="1"/>
+        </attr>
+        <attr name="barsRotationSpeed" format="integer"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="animateBars" format="boolean"/>
+    </declare-styleable>
+
+    <!--1-->
+    <declare-styleable name="AnalogClockView">
+        <!--2-->
+        <attr name="hourHandColor" format="color" />
+        <attr name="minuteHandColor" format="color" />
+        <attr name="secondHandColor" format="color" />
+        <attr name="ringColor" format="color" />
+        <attr name="clockBackgroundColor" format="color" />
+        <attr name="centerCircleColor" format="color" />
+        <attr name="hourHandWidth" format="dimension" />
+        <attr name="minuteHandWidth" format="dimension" />
+        <attr name="secondHandWidth" format="dimension" />
+        <attr name="ringWidth" format="dimension" />
+        <attr name="centerCircleSize" format="dimension" />
+        <attr name="disableSecondHand" format="boolean" />
+    </declare-styleable>
+</resources>
+

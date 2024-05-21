@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".fragments.TimerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/selectTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:visibility="visible">
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="100dp"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shadowColorLight="@color/shadow_light_color"
+                app:neumorph_shapeType="pressed" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shadowColorLight="@color/shadow_light_color"
+                app:neumorph_shapeType="pressed" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="5dp"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shadowColorLight="@color/shadow_light_color"
+                app:neumorph_shapeType="pressed" />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/numHourPicker"
+                android:layout_width="100dp"
+                android:layout_height="300dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                app:np_dividerColor="@color/bg_color"
+                app:np_dividerDistance="300dp"
+                app:np_dividerLength="100dp"
+                app:np_formatter="%02d"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/theme_color_secondary"
+                app:np_selectedTextSize="60sp"
+                app:np_textColor="@color/white"
+                app:np_textSize="30sp" />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/numMinutePicker"
+                android:layout_width="100dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                app:np_dividerColor="@color/bg_color"
+                app:np_dividerDistance="300dp"
+                app:np_dividerLength="100dp"
+                app:np_formatter="%02d"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/theme_color_secondary"
+                app:np_selectedTextSize="60sp"
+                app:np_textColor="@color/white"
+                app:np_textSize="30sp" />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/numSecondPicker"
+                android:layout_width="100dp"
+                android:layout_height="300dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                app:np_dividerColor="@color/bg_color"
+                app:np_dividerDistance="300dp"
+                app:np_dividerLength="100dp"
+                app:np_formatter="%02d"
+                app:np_max="59"
+                app:np_min="0"
+                app:np_selectedTextColor="@color/theme_color_secondary"
+                app:np_selectedTextSize="60sp"
+                app:np_textColor="@color/white"
+                app:np_textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="133dp"
+                android:layout_marginTop="110dp"
+                android:fontFamily="@font/bitsumis_font"
+                android:text=":"
+                android:textColor="@color/theme_color_secondary"
+                android:textSize="60sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="110dp"
+                android:layout_marginRight="133dp"
+                android:fontFamily="@font/bitsumis_font"
+                android:text=":"
+                android:textColor="@color/theme_color_secondary"
+                android:textSize="60sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:visibility="gone">
+            
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textSize="50sp"
+                android:fontFamily="@font/bitsumis_font"
+                android:textColor="@color/theme_color_secondary"
+                android:layout_centerInParent="true"/>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                app:neumorph_shadowColorLight="@color/shadow_light_color"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shapeType="pressed"
+                android:layout_centerInParent="true"/>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="320dp"
+                android:layout_height="320dp"
+                android:layout_centerInParent="true"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shadowColorLight="@color/shadow_light_color"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearanceCardView"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="410dp"
+                android:layout_height="410dp"
+                android:layout_centerInParent="true"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shadowColorLight="@color/shadow_light_color"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearanceCardView"
+                app:neumorph_shapeType="basin" />
+
+            <com.example.clocky.customViews.ArcsView
+                android:id="@+id/arcs"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                app:arcDir="clockwise"
+                app:strokeWidth1="1.5dp"
+                app:strokeWidth2="1.5dp"
+                app:arcColor1="@color/theme_color"
+                app:arcColor2="@color/theme_color"
+                android:visibility="gone"/>
+
+            <com.example.clocky.customViews.CircularBarsView
+                android:id="@+id/circularBars"
+                android:layout_width="360dp"
+                android:layout_height="360dp"
+                android:layout_centerInParent="true"
+                app:animateBars="true"
+                app:animationBarColor="#E91E63"
+                app:barsColor="@color/theme_color_secondary"
+                app:barsCount="50"
+                app:barsLength="12dp"
+                app:barsRotationSpeed="8"
+                app:circularBarsDir="clockwise"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/timerButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:visibility="gone">
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/btnReset"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="50dp"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shadowColorLight="@color/shadow_light_color">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/reset_icon"
+                        app:tint="@color/theme_color" />
+                </RelativeLayout>
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/btnPlayPause"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shadowColorLight="@color/shadow_light_color">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageAvd"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/play_to_pause_avd"
+                        app:tint="@color/theme_color" />
+                </RelativeLayout>
+            </soup.neumorphism.NeumorphCardView>
+        </RelativeLayout>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/btnStart"
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            app:neumorph_shadowColorLight="@color/shadow_light_color"
+            app:neumorph_shadowColorDark="@color/shadow_dark_color"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="start"
+                    android:fontFamily="@font/bitsumis_font"
+                    android:gravity="center"
+                    android:textSize="30sp"
+                    android:textColor="@color/theme_color"/>
+            </RelativeLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Clocky" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <style name="my_dialog_theme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:colorAccent">@color/theme_color</item>                   <!--header background-->
+        <item name="android:windowBackground">@color/bg_color</item>     <!--calendar background-->
+        <item name="android:colorControlActivated">@color/theme_color</item> <!--selected day-->
+        <item name="android:textColorPrimary">@color/theme_color_secondary</item> <!--days of the month-->
+        <item name="android:textColorSecondary">@color/theme_color</item>    <!--days of the week-->
+    </style>
+
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/bg_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/clocky_avd</item>
+        <item name="windowSplashScreenAnimationDuration">1200</item>
+        <item name="postSplashScreenTheme">@style/Theme.Clocky</item>
+    </style>
+</resources>

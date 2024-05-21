@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_color"
+    tools:context=".fragments.ClockFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_centerInParent="true"
+                app:neumorph_shadowElevation="8dp"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shadowColorLight="@color/shadow_light_color"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearanceCardView"
+                app:neumorph_shapeType="flat" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                app:neumorph_shadowElevation="8dp"
+                app:neumorph_shadowColorDark="@color/shadow_dark_color"
+                app:neumorph_shadowColorLight="@color/shadow_light_color"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearanceCardView"
+                app:neumorph_shapeType="pressed" />
+
+            <com.example.clocky.customViews.AnalogClockView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="100dp"
+                app:clockBackgroundColor="@color/bg_color"
+                app:hourHandColor="@color/theme_color"
+                app:minuteHandColor="@color/theme_color"
+                app:ringColor="@color/theme_color" />
+
+        </RelativeLayout>
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            app:neumorph_shadowColorLight="@color/shadow_light_color"
+            app:neumorph_shadowColorDark="@color/shadow_dark_color"
+            android:layout_gravity="center"
+            app:neumorph_shadowElevation="8dp"
+            android:layout_marginTop="50dp"
+            app:neumorph_shapeType="pressed">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextClock
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:fontFamily="@font/bitsumis_font"
+                    android:textSize="60sp"
+                    android:textColor="@color/theme_color_secondary"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:format12Hour="HH:mm"/>
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:textSize="20sp"
+                    android:text="FRI May 12, 2024"
+                    android:fontFamily="@font/bitsumis_font"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#9E9E9E"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </LinearLayout>
+
+</FrameLayout>

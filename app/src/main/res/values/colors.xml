@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_color">#03081E</color>
+    <color name="shadow_light_color">#050C2E</color>
+    <color name="shadow_dark_color">#01040E</color>
+
+    <color name="button_bg_color">#03081E</color>
+
+    <color name="transparent_color">#00000000</color>
+
+<!--    <color name="switch_on_color">#673AB7</color>-->
+<!--    <color name="switch_off_color">#324BD3</color>-->
+
+    <color name="switch_on_color">#5209D5</color>
+    <color name="switch_off_color">#284BE4</color>
+
+<!--    <color name="theme_color">#673AB7</color>-->
+<!--    <color name="theme_color_secondary">#3D5BDC</color>-->
+
+    <color name="theme_color">#5209D5</color>
+    <color name="theme_color_secondary">#284BE4</color>
+
+</resources>
